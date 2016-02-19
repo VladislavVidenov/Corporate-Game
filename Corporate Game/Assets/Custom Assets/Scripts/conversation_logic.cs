@@ -25,7 +25,7 @@ public class conversation_logic : MonoBehaviour {
     public Material morning_skybox, day_skybox, afternoon_skybox, night_skybox;
    
     //lights
-    public Light main_light, night_light, key_light_1, key_light_2, camp_light;
+    public Light main_light, night_light;
   
     //day and actions
     private int day_count = 0, action_count = 2, conversation_level = 1;
@@ -71,12 +71,12 @@ public class conversation_logic : MonoBehaviour {
             RenderSettings.skybox = night_skybox;
             main_light.enabled = false;
             night_light.enabled = true;
-            key_light_1.intensity = 0.1f;
-            key_light_1.intensity = 0.1f;
+            //key_light_1.intensity = 0.1f;
+            //key_light_1.intensity = 0.1f;
 
             if (given_oil)
             {
-                camp_light.enabled = true;
+                //camp_light.enabled = true;
                 
             }
         }
@@ -86,8 +86,8 @@ public class conversation_logic : MonoBehaviour {
             RenderSettings.skybox = afternoon_skybox;
             main_light.color = new Color(1.0f, 0.937f, 0.435f, 1.0f);
             main_light.intensity = 0.5f;
-            key_light_1.intensity = 0.5f;
-            key_light_1.intensity = 0.5f;
+            //key_light_1.intensity = 0.5f;
+            //key_light_1.intensity = 0.5f;
         }
 
         if (action_count == 2)
@@ -95,8 +95,8 @@ public class conversation_logic : MonoBehaviour {
             RenderSettings.skybox = day_skybox;
             main_light.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             main_light.intensity = 0.8f;
-            key_light_1.intensity = 0.5f;
-            key_light_1.intensity = 0.5f;
+            //key_light_1.intensity = 0.5f;
+            //key_light_1.intensity = 0.5f;
         }
 
         if (action_count == 3)
@@ -106,8 +106,8 @@ public class conversation_logic : MonoBehaviour {
             night_light.enabled = false;
             main_light.color = new Color(1.0f, 0.956f, 0.839f, 1.0f);
             main_light.intensity = 0.5f;
-            key_light_1.intensity = 0.1f;
-            key_light_1.intensity = 0.1f;
+            //key_light_1.intensity = 0.1f;
+            //key_light_1.intensity = 0.1f;
         }
     }
 
